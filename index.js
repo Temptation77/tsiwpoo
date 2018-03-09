@@ -105,5 +105,5 @@ function funcF() {
  //Alínea I 
  function funcI() {
      
-     
+     console.log("teste")
  }
