@@ -86,8 +86,8 @@ function funcF() {
  }
  //Alínea G 
  function funcG() {
-     let a = parseInt(prompr("Escreva o 1º número: "))
-     let b = parseInt(prompr("Escreva o 2º número: "))
+     let a = parseInt(prompt("Escreva o 1º número: "))
+     let b = parseInt(prompt("Escreva o 2º número: "))
      for (let index = a + 1; index < b; index++) {
         console.log(index)   
    }
@@ -97,13 +97,24 @@ function funcF() {
  function funcH() {
      let numero = parseInt(prompt("Escreva um número: "))
      for (let index = 1; index < 11; index++) {
-         console.log(numero + "*" * + index + "=" + numero * index)
+         console.log(numero + "*"  + index + "=" + numero * index)
        
      }
      
  }
  //Alínea I 
  function funcI() {
+    let a = parseInt(prompt("Escreva o 1ºnúmero: "))
+    let b = parseInt(prompt("Escreva o 2ºnúmero: "))
+    let soma = 0 
+    for (let index = a+1; index < b; index++)
+    {
+        console.log(soma = soma +( 3*index))   
+       
+    }
+ }
+ //Alínea J 
+ function funcJ() {
+     let num = parseInt(prompt("Insira o número que quer testar: "))
      
-     console.log("teste")
  }
