@@ -116,5 +116,96 @@ function funcF() {
  //Alínea J 
  function funcJ() {
      let num = parseInt(prompt("Insira o número que quer testar: "))
+     let primo = true
+     for (let index = 2; index < num; index++) {
+         {
+             if (num % index == 0) {
+                 primo = false 
+             }
+         }
+    if (primo) {
+        console.log("Sim")
+    }  
+    else {
+        console.log("Não")
+    }
+     }
+ }
+ //Alínea K 
+ function funcK() {
+     let num = parseInt(prompt("Insira o número que quer calcular: "))
+     let fatorial = 1
+     for (let index = num; index > 0; index--) {
+       console.log(fatorial = fatorial * index)
+         
+     }
      
+ }
+ //Alínea L 
+ function funcL() {
+     let num = parseInt(prompt("Insira o número que pretende: "))
+     let soma = 0
+     for (let index = 1; index < num; index++) {
+         if (num%index == 0) {
+             soma = soma + index 
+             console.log(index)
+         }
+         
+     }
+     if (soma == num){
+         console.log("É um número perfeito")
+     }
+     else{
+         console.log("Não é um número perfeito")
+     }
+ }
+ //Alínea M 
+ function funcM() {
+    let ano = parseInt(prompt("Insira o ano: "))
+    if ( ( ano % 4 == 0 && ano % 100 != 0 ) || (ano % 400 == 0) ) { 
+        console.log(ano + ' é bissexto'); 
+    } else {
+        console.log(ano + ' não é bissexto');
+    }
+ }
+ //Alínea N 
+ function funcN() {
+     let num = prompt("Insira um número entre 100 e 999: ")
+     if(num.charAt(0) == num.charAt(2)){
+         console.log("O número é uma capicua")
+     }
+     else{
+         console.log("O número não é uma capicua")
+     }
+ }
+ //Alínea O 
+ function funcO() {
+     let aleatorio = parseInt(Math.random()* 99) + 1
+     let tentativas = 0 
+     while ( tentativas <= 10){
+         let numero = parseInt(prompt("Insira um número entre 1 e 100"))
+
+         if (numero > aleatorio){
+             console.log("Para baixo")
+         }
+
+         else if (numero < aleatorio){
+             console.log("Para cima")
+         }
+
+         else if (tentativas == 10){
+             console.log("Game Over , tente outra vez")
+             break
+         } 
+
+         else {
+             console.log("Parabéns ! Acertou em " + tentativas + "tentativas")
+             break
+         }
+         tentativas++
+         console.log("tentativas" + tentativas)
+         console.log("aleatório" + aleatorio)
+     }
+
+             
  }
