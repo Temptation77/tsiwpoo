@@ -77,3 +77,34 @@ function funcG() {
     }
     show(maior)
 }
+//Alínea H 
+function funcH() {
+    let palavra = prompt("Escreva a palavra que quer testar: ")
+    let cores = ["Vermelho", "Verde", "Branco", "Preto"]
+    let contador = 0
+    for (let index = 0; index < cores.length; index++) {
+        if (palavra == cores[index]){
+            contador ++
+        }
+        
+    }
+    show(contador)
+}
+//Alínea I 
+function funcI() {
+    let array = ["passe", "confirmação"]
+    let pass = prompt("Escreva a password que pretende: ")
+    let confirmaçao = prompt("Confirme a password: ")
+    for (let index = 0; index < array.length; index++) {
+        if (pass == array[0] && confirmaçao == array[1] ) {
+            show("1")     
+        }
+        else {
+            show("0")   
+        }
+    }
+}    
+//Alínea J
+function funcJ() {
+    
+}
