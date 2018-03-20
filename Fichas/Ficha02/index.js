@@ -106,7 +106,11 @@ function funcI() {
 }    
 //Alínea J
 function funcJ() {
-    
+    let array = ["a", "b", "c"]
+    let posiçao = parseInt(prompt("Insira a posição que pretende: "))
+    for (let index = 0; index < array.length; index++) {
+        show(array[posiçao])
+    }
 }
 //Alínea K 
 function funcK(){
