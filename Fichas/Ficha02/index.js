@@ -114,7 +114,11 @@ function funcJ() {
 }
 //Alínea K 
 function funcK(){
-
+    let valor = parseInt(prompt("Insira o valor que pretende: "))
+    for (let index = 1; 0 < index < valor.length; index++) {
+                
+    }
+    show()
 }
 //Alínea L
 function funcL(){
