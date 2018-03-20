@@ -108,3 +108,19 @@ function funcI() {
 function funcJ() {
     
 }
+//Alínea K 
+function funcK(){
+
+}
+//Alínea L
+function funcL(){
+
+} 
+//Alínea M
+function funcM(){
+
+} 
+//Alínea N
+function funcN() {
+    
+}
