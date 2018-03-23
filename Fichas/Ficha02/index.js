@@ -114,21 +114,43 @@ function funcJ() {
 }
 //Alínea K 
 function funcK(){
+    let numeros =  [7, 3, 6, 12, 5] 
+    let novo_array = []
     let valor = parseInt(prompt("Insira o valor que pretende: "))
-    for (let index = 1; 0 < index < valor.length; index++) {
-                
+    for (let index = 0; index < numeros.length; index++) {
+      if (numeros[index] < valor) {
+          novo_array.push(numeros[index])
+      }        
     }
-    show()
+    show(novo_array)
 }
 //Alínea L
 function funcL(){
-
+    let numeros = [7,3,6,12,5]
+    let pares = []
+    for (let index = 0; index < numeros.length; index++) {
+        if (numeros[index] % 2 == 0){
+            pares.push(numeros[index])
+        }
+    }
+    show(pares)
 } 
 //Alínea M
 function funcM(){
-
+    let numeros = [7,3,6,12,5]
+    let novo_array = []
+    for (let index = 0; index < numeros.length; index++) {
+        novo_array.push(numeros[index] + 1)            
+        }  
+    show(novo_array)  
 } 
 //Alínea N
 function funcN() {
-    
+    let array1 = [1,0,2,3,4,0] 
+    let array2 = [3,5,6,7,8,13]
+    let novo_array = []
+    for (let index = 0; index < array1.length; index++) {
+        novo_array.push(array2[index]+array1[index])
+    }
+    show(novo_array)
 }
