@@ -63,4 +63,13 @@ function funcF (){
     }
     show(nova_string)
 }
+//Alínea G 
+function funcG() {
+
+    
+}
+//Alínea H 
+function funcH() {
+    
+}
 
