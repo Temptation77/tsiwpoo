@@ -52,5 +52,15 @@ function funcE() {
     show(palavra)
 }
 //Alínea F
-
+function funcF (){
+    let string = prompt("Escreva aqui: ")
+    let caracter = prompt("Escreva um carácter: ")
+    let nova_string = ""
+    for (let index = 0; index < string.length; index++) {
+        if (string[index] != caracter){
+            nova_string += string[index]
+        }        
+    }
+    show(nova_string)
+}
 
