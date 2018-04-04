@@ -8,7 +8,7 @@ function init() {
     let myTxt = document.getElementById("myTxt")
     let myBtn = document.getElementById("myBtn")
 
-    //Alterar o texto do pragrafo 
+    //Alterar o texto do paragrafo 
     myP.innerHTML = "Bem-vindo à minha página!"
 
     //Clicar no botão
