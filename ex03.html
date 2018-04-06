@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TESTE Nº1 - EX. Nº3</title>    
+    <style>
+        table {
+            width: 50%; 
+            border-collapse: collapse;
+        }
+        table td, table th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>EXERCÍCIO Nº3</h1>
+    <p><b>
+        3) Crie um ficheiro (ex03.js) que inclua o código necessário para quando clicar no botão “+” deve ser inserida uma nova linha na cauda da tabela com as células a serem automaticamente preenchidas pelo texto da caixa de texto. <br>
+        Para dividir o texto a colocar em cada célula use o “;” na caixa de texto:
+        <ul>
+            <li>Se ao pressionar o botão "+" não tiver preenchido a caixa de texto deve surgir uma mensagem predefinida do HTML5;</li>
+            <li>Se o texto não contiver qualquer “;”, o texto deve ser todo inserido na 1ªcélula;</li>
+            <li>Se o texto tiver mais que um “;”, todos os subsequentes “;” devem ser ignorados.</li>
+        </ul>
+    	Ao clicar no botão “-” deve ser removida a última linha da tabela. Quando a tabela não tiver mais linhas deve ser desativado o botão<br><br>
+        Todos os dados de input e output devem ser obtidos/colocados neste ficheiro HTML que <u>não deve ser alterado.</u>
+    </b>
+    </p>
+    <p>
+        <!-- TABELA -->
+        <table id="myTable" align="center"><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+    </p>
+    
+    <h2 align="center">
+        <!-- CAIXA DE TEXTO E BOTÕES -->
+        TEXTO: <input required id="txtDados" type="text"> <button id="btnAdicionar">+</button> <button id="btnRemover">-</button>
+    </h2>
+    <script src="ex03.js"></script>
+</body>
+</html>
