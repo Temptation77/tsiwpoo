@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Ficha 8 - EX Nº1</title>
+    <title>Ficha 08 - EX Nº1</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +11,50 @@
     <script>ex_01.js</script>
   </head>
   <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Personalities App</h1>
+            <p class="lead">An app to manage personalities from from the computer world!</p>
+            <hr class="my-2">
+
+            <!-- Criação do form -->
+            <form id="frmPersonalities">
+                    <div class="form row">
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Name</label>
+                            <input type="text" class="form-control" id="inputName" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputYear">Year of Birth</label>
+                            <input type="number" min="1000" max="2000" required class="form-control" id="inputYear">
+                        </div>
+                        <div class="form-group col-md-4">
+                                <label for="inputNacionality">Nacionality</label>
+                                <select id="inputNacionality" class="from-control" required>
+                                    <option selected>Choose...</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="Africa">Africa</option>
+                                    <option value="America">America</option>
+                                    <option value="Asia">Asia</option>~
+                                    <option value="Oceania">Oceania</option>
+                                </select>
+                        </div>
+                        <!--Buttons-->
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="submit" class="">
+                            </div>
+                        </div>                                                                                                                                                                           
+                    </div>
+                    
+                </form>
+            
+            <p>More info </p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+            </p>
+        </div>
+    </div>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
