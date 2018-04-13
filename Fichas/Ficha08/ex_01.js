@@ -20,7 +20,7 @@ class Personality{
         return this._year
     }
     set year(newYear){
-        this._name = newYear
+        this._year = newYear
     }
     //Property nacionality
     get nacionality(){
