@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script>ex_01.js</script>
+    <script src="ex_01.js"></script>
   </head>
   <body>
     <div class="container">
@@ -29,30 +29,41 @@
                             <input type="number" min="1000" max="2000" required class="form-control" id="inputYear">
                         </div>
                         <div class="form-group col-md-4">
-                                <label for="inputNacionality">Nacionality</label>
-                                <select id="inputNacionality" class="from-control" required>
+                                <label for="inputNacionality">Nationality</label>
+                                <select id="inputNacionality" class="form-control" required>
                                     <option selected>Choose...</option>
                                     <option value="Europe">Europe</option>
                                     <option value="Africa">Africa</option>
                                     <option value="America">America</option>
-                                    <option value="Asia">Asia</option>~
+                                    <option value="Asia">Asia</option>
                                     <option value="Oceania">Oceania</option>
                                 </select>
                         </div>
-                        <!--Buttons-->
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <input type="submit" class="">
-                            </div>
-                        </div>                                                                                                                                                                           
                     </div>
-                    
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputWork">Main work or creation:</label>
+                                <input type="text" class="form-control" id="inputWork" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPhoto">Photo link:</label>
+                                <input type="url" class="form-control" id="inputPhoto" required>
+                            </div>
+                    </div>
+                    <!--Buttons-->
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <button type="submit" class="btn btn-primary mb-2">Add personality</button>
+                            <button type="reset" class="btn btn-primary mb-2">Clear values</button>
+                        </div>
+                    </div>                                                                                                                                                                                               
+                   
+                                        
                 </form>
-            
-            <p>More info </p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-            </p>
+
+                <!-- Tabela -->
+                <table id="tblPersonalities" class="table table-sm"></table>
+                       
         </div>
     </div>
       
