@@ -40,8 +40,6 @@ class User {
 }
 
 
-
-
 window.onLoad = function () {
     let frmRegister = document.getElementbyID("frmRegister")
 
@@ -55,9 +53,22 @@ window.onLoad = function () {
             strError = "As passwords têm de ser iguais!"
         }
         //2. Validar se ja existe um user com o mesmo email
-        
+        let inputEmail = document.getElementById("inputEmail")
+        let userExist = false
+        for (var i = 0; i < users.length; i++) {
+            if (user[i].email == inputEmail.value) {
+                userExist = true
+            }
+        }
+
+        if(userExist == true ){
+            strError += "\nEmail já existente!"
+        }
         //3. Criar o utilizador
+        if()
+
         //4. Adicionar ao array 
+        user
         //5. Alerta de sucesso 
         //6. Fechar a modal
         //7. Alterar navbar
