@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Ficha nº 8 - Exercício 2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron mt-5">
+            <h1 class="display-3">Aplicação de registo de jogos</h1>
+            <p class="lead">Gerir jogos</p>
+            <hr class="my-2">
+            <h4 id="editarTitulo"></h3>
+            <form id="form">
+                <div class="form-row">
+                    <!--Nome do jogo-->
+                    <div class="form-group col-md-6">
+                        <label for="inputNome">Nome do jogo:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-info" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input required autofocus type="text" class="form-control" id="inputNome">
+                        </div>
+                    </div>
+
+                    <!--Género-->
+                    <div class="form-group col-md-6">
+                        <label for="inputGenero">Género:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-globe"></i>
+                                </span>
+                            </div>
+                            <select required class="form-control" id="inputGenero">
+                                <option hidden value="">Selecione uma opção</option>
+                                <option value="Ação">Ação</option>
+                                <option value="Aventura">Aventura</option>
+                                <option value="Estratégia">Estratégia</option>
+                                <option value="RPG">RPG</option>
+                                <option value="Desporto">Desporto</option>
+                                <option value="Corrida">Corrida</option>
+                                <option value="Simulação">Simulação</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Plataformas-->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Plataforma:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-gamepad" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="form-check form-check-inline form-control">
+                                <label class="form-check-label mr-4 ml-4">
+                                    <input class="form-check-input" type="checkbox" name="plataforma" value="Steam"> Steam
+                                </label>
+                                <label class="form-check-label mr-4">
+                                    <input class="form-check-input" type="checkbox" name="plataforma" value="PS4"> PS4
+                                </label>
+                                <label class="form-check-label mr-4">
+                                    <input class="form-check-input" type="checkbox" name="plataforma" value="Mobile"> Mobile
+                                </label>
+                                <label class="form-check-label mr-4">
+                                    <input class="form-check-input" type="checkbox" name="plataforma" value="Xbox"> Xbox
+                                </label>
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="plataforma" value="Wii"> Wii
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--Link para capa-->
+                    <div class="form-group col-md-6">
+                        <label for="inputCapa">Link para capa:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input required autofocus type="url" class="form-control" id="inputCapa">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <!--Reset-->
+                        <input type="reset" id="btnReset" class="form-control btn-secondary" value="Limpar">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <!--Submeter-->
+                        <input type="submit" class="form-control btn btn-primary" id="btnSubmit">
+                    </div>
+                </div>
+
+                <div class="form-row" id="btnsAdicionais">
+                    <!--Filtrar por género-->
+                    <div class="form-group col-md-6">
+                        <label for="filtrarGenero">Filtrar jogos por género:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-globe"></i>
+                                </span>
+                            </div>
+                            <select required class="form-control" id="filtrarGenero">
+                                <option selected>Todos</option>
+                                <option>Ação</option>
+                                <option>Aventura</option>
+                                <option>Estratégia</option>
+                                <option>RPG</option>
+                                <option>Desporto</option>
+                                <option>Corrida</option>
+                                <option>Simulação</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-md-6 mt-3">
+                        <!--Remover todos os jogos-->
+                        <input id="btnRemoverTodos" type="button" class="btn form-control btn-danger mt-3" value="Remover todos os jogos">
+                    </div>
+                </div>
+            </form>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modalTitulo"></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="modalBody"></div>
+                        <div class="modal-footer" id="modalFooter"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabela -->
+            <div class="table-responsive">
+                <table class="table table-hover" id="tabela"></table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="ex02.js"></script>
+</body>
+
+</html>
+© 2018 GitHub, Inc.

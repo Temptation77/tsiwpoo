@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Ficha nº 8 - Exercício 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Aplicação de personalidades</h1>
+            <p class="lead">Gerir personalidades da computação</p>
+            <hr class="my-2">
+            <form id="form">
+                <div class="form-row">
+                    <!--Nome-->
+                    <div class="form-group col-md-6">
+                        <label for="inputNome">Nome:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input required autofocus type="text" class="form-control" id="inputNome">
+                        </div>
+                    </div>
+
+                    <!--Ano de nascimento-->
+                    <div class="form-group col-md-3">
+                        <label for="inputAno">Ano de nascimento:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input required type="number" min="1000" class="form-control" id="inputAno">
+                        </div>
+                    </div>
+
+                    <!--Nacionalidade-->
+                    <div class="form-group col-md-3">
+                        <label for="inputNacionalidade">Nacionalidade:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-globe"></i>
+                                </span>
+                            </div>
+                            <select required class="form-control" id="inputNacionalidade">
+                                <option hidden value="">Selecione uma opção</option>
+                                <option>América</option>
+                                <option>Europa</option>
+                                <option>Ásia</option>
+                                <option>África</option>
+                                <option>Oceania</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!--Principal obra/criação-->
+                    <div class="form-group col-md-6">
+                        <label for="inputObra">Principal obra/criação:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-star"></i>
+                                </span>
+                            </div>
+                            <input required autofocus type="text" class="form-control" id="inputObra">
+                        </div>
+                    </div>
+
+                    <!--Link para foto-->
+                    <div class="form-group col-md-6">
+                        <label for="inputFoto">Link para foto:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input required autofocus type="url" class="form-control" id="inputFoto">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <!--Reset-->
+                        <input type="reset" id="btnReset" class="form-control btn-secondary" value="Limpar">
+
+
+                    </div>
+                    <div class="form-group col-md-6">
+                        <!--Submeter-->
+                        <input type="submit" class="form-control btn btn-primary"></div>
+                </div>
+            </form>
+
+            <table class="table table-striped table-hover" id="tabela">
+
+            </table>
+
+
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="ex01.js"></script>
+</body>
+
+</html>
