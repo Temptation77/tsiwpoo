@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Testemunhos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="Fotos/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="testemunhos.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        .navBar {
+
+            position: fixed;
+
+        }
+
+
+
+        h6 {
+            font-family: "arial";
+
+        }
+
+        p {
+            font-family: "arial";
+
+        }
+
+        h2 {
+            text-align: center;
+            font-family: "particle regular";
+        }
+
+        body {}
+
+        #eventosContainer {
+            background-color: floralwhite;
+        }
+
+        h1 {
+            font-family: "particle regular";
+            text-align: center;
+
+        }
+
+
+        /* rigth modal*/
+
+        .modal.right .modal-dialog {
+            padding-top: 80px;
+            position: relative;
+            margin-right: 100px;
+            width: 320px;
+            height: 60%;
+            -webkit-transform: translate3d(0%, 0, 0);
+            -ms-transform: translate3d(0%, 0, 0);
+            -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--BARRA DE NAVEGAÇÃO-->
+    <nav id="navBar" class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+        <img class="img-responsive2" src="fotos/TSIW.png">
+
+
+        <li>
+            <a id="myImgGeventos" href="HomePage.html">
+                <img class="img-responsive2" src="fotos/GEventosLogoFinal.png">
+            </a>
+        </li>
+
+
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+
+            <ul class="navbar-nav">
+                <!--OPÇÃO eventos-->
+                <li id="optEventos" class="nav-item">
+                    <a class="nav-link" href="Eventos.html">Eventos</a>
+                </li>
+                <!--OPÇÃO Testemunhos-->
+                <li id="optTestemunhos" class="nav-item active">
+                    <a class="nav-link" href="testemunhos.html">Testemunhos</a>
+                </li>
+                <!--OPÇÃO Docentes-->
+                <li id="optDocentes" class="nav-item">
+                    <a class="nav-link" href="Docentes.html">Docentes</a>
+                </li>
+                <!--OPÇÃO Parcerias-->
+                <li id="optParcerias" class="nav-item">
+                    <a class="nav-link" href="Parcerias.html">Parcerias</a>
+                </li>
+                <!--OPÇÃO Login-->
+                <li id="optLogin" class="nav-item">
+
+                    <a data-toggle="modal" data-target="#loginModal" class="nav-link" href="#">
+                        <i class="fas fa-user-circle">
+
+                        </i>
+                        <small style="font-family:Arial">Login</small>
+                    </a>
+                </li>
+                <!--OPÇÃO Logout-->
+                <li id="optLogout" class="nav-item">
+
+                    <a data-target="#" class="nav-link" href="#">
+                        <i class="fas fa-sign-out-alt">
+
+                        </i>
+                        <small style="font-family:Arial">Logout</small>
+
+                    </a>
+                </li>
+
+                <!--OPÇÃO Registo-->
+                <li id="optRegisto" class="nav-item">
+                    <a id="linkRegistar" data-toggle="modal" data-target="#registoModal" class="nav-link" href="#">
+                        <i class="fas fa-user-plus">
+                            <small style="font-family:Arial">
+
+                            </small>
+                        </i>
+                        <small style="font-family:Arial">Registar</small>
+
+                    </a>
+                </li>
+                <!--OPÇÃO Cnfiguraçao-->
+                <li id="optConfig" class="nav-item">
+                    <a id="linkConfig" class="nav-link " href="Config.html">
+                        <i class="fas fa-cogs">
+
+                        </i>
+                    </a>
+
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <br>
+    <br>
+
+
+    <!-- Modal Login -->
+    <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id="frmLogin">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <!-- image on the modal -->
+                    <div class="modal-body">
+                        <div id="imgModal">
+                            <img src="fotos/G.png" alt="">
+                            <br>
+                            <br>
+                        </div>
+
+                        <h3 class="modal-title" id="exampleModalLabel">Login</h3>
+
+                        <br>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="text" class="form-control" name="" id="ModalName" placeholder="Name" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="password" class="form-control" name="" id="ModalPassword" placeholder="Password" required>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button id="Loginbtn" type="submit" class="btn btn-warning">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Modal de registo -->
+    <div class="modal fade" id="registoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id="frmRegistar">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- image on the modal -->
+                    <div class="modal-body">
+
+                        <div id="imgModal">
+                            <img src="fotos/G.png" alt="">
+                            <br>
+                            <br>
+                        </div>
+
+                        <h3 class="modal-title" id="exampleModalLabel">Registar</h3>
+
+                        <br>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="text" class="form-control" name="" id="ModalNome" placeholder="Nome" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="Email" class="form-control" name="" id="ModalEmail" placeholder="Email" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="Password" class="form-control" name="" id="ModalPasswordR" placeholder="Password" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="Password" class="form-control" name="" id="ModalConfPassword" placeholder="Confirmar password" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="url" class="form-control" name="" id="ModalFoto" placeholder="Link da foto">
+
+                        </div>
+                        <br>
+                        <h4>Tipo de utilizador</h4>
+
+                        <div class="row">
+                            <form action="">
+                                <div class="col-sm-4">
+                                    <input id="estudante" type="radio" name="user" value="Estudante" checked> Estudante
+                                </div>
+                                <div class="col-sm-4">
+                                    <input id="docente" type="radio" name="user" value="Docente"> Docente
+                                </div>
+                                <div class="col-sm-4">
+                                    <input id="visitante" type="radio" name="user" value="Visitante"> Visitante
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <input id="RegistarModal" type="submit" class="btn btn-primary"></input>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <h1>Testemunhos</h1>
+        <br>
+        <p style="text-align:center">Página dedicada aos testemunhos do curso. Testemunhos estes que estão atualmente frquentando o curso ou alunos que
+            já se formaram no referido curso
+        </p>
+        <small style="text-align:center">
+            <p>Para deixar o seu testemunho basta fazer o login</p>
+        </small>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-2">
+
+                    </div>
+            <div class="col-sm-2">
+                <a id="+Testemunhos" data-toggle="modal" data-target="#modelTestemunhos" href="">
+                    <i class="fas fa-plus-square">
+
+                    </i>
+                    <small id="helpId" class="form-text text-muted">Testemunhar</small>
+                </a>
+
+            </div>
+
+            <br>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+
+
+            </div>
+
+            <br>
+
+        </div>
+        <div id="myCardTestemunhos">
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <!-- Modal Testemunhos -->
+
+    <div class="modal right fade" id="modelTestemunhos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id="frmTestemunhos">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+
+                    <h3 class="modal-title" id="exampleModalLabel" style="text-align:center">Testemunhar</h3>
+
+                    <br>
+                    <div class="form-group">
+                        <div class="form-group">
+
+                            <textarea class="form-control" name="" id="modelTestemunho" rows="3" cols="2"></textarea>
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <input type="url" class="form-control" name="" id="fotoTe" aria-describedby="helpId" placeholder="foto">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button id="btnSubmeterTestemunho" type="submit" class="btn btn-warning">Submeter</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+</body>
+
+</html>

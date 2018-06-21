@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Parcerias</title>
+    <!-- Required meta tags -->
+    <link rel="icon" type="image/png" sizes="16x16" href="Fotos/favicon-16x16.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="Parcerias.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        .navBar {
+
+            position: fixed;
+
+        }
+        .card {
+           
+           transition: 0.3s;
+  
+           border: 0px;
+       }
+
+       .card:hover {
+           box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.2);
+       }
+
+        #li {
+            list-style: none;
+            position: relative;
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+        }
+
+        h6 {
+            font-family: "arial";
+
+        }
+
+        h2 {
+            text-align: center;
+            font-family: "particle regular";
+        }
+
+        body {
+           
+        }
+
+        #eventosContainer {
+            background-color: floralwhite;
+        }
+
+        h1 {
+            font-family: "particle regular";
+            text-align: center;
+        }
+        .button {
+            background-color: rgb(243, 177, 35);
+            border: none;
+            color: white;
+            padding: 10px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        footer {
+            background-color: #080808;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--BARRA DE NAVEGAÇÃO-->
+    <nav id="navBar" class="navbar navbar-expand-sm navbar-dark bg-dark" style="background-color: #00000000;">
+
+        <img class="img-responsive2" src="fotos/TSIW.png">
+
+
+        <li>
+            <a id="myImgGeventos" href="HomePage.html">
+                <img class="img-responsive2" src="fotos/GEventosLogoFinal.png">
+            </a>
+        </li>
+
+
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+               
+            </form>
+            <ul class="navbar-nav">
+                <!--OPÇÃO eventos-->
+                <li id="optEventos" class="nav-item">
+                    <a class="nav-link" href="Eventos.html">Eventos</a>
+                </li>
+                <!--OPÇÃO Testemunhos-->
+                <li id="optTestemunhos" class="nav-item">
+                    <a class="nav-link" href="testemunhos.html">Testemunhos</a>
+                </li>
+                <!--OPÇÃO Docentes-->
+                <li id="optDocentes" class="nav-item">
+                    <a class="nav-link" href="Docentes.html">Docentes</a>
+                </li>
+                <!--OPÇÃO Parcerias-->
+                <li id="optParcerias" class="nav-item active">
+                    <a class="nav-link" href="Parcerias.html">Parcerias</a>
+                </li>
+                 <!--OPÇÃO Login-->
+                 <li id="optLogin" class="nav-item">
+                      
+                        <a data-toggle="modal" data-target="#loginModal" class="nav-link" href="#">
+                                <i class="fas fa-user-circle">
+                                    <small style="font-family:Arial">Login</small>
+                                </i>
+                        </a>
+                    </li>
+                    <!--OPÇÃO Logout-->
+                    <li id="optLogout" class="nav-item">
+                         
+                        <a data-target="#" class="nav-link" href="#">
+                                <i class="fas fa-sign-out-alt">
+                                        <small style="font-family:Arial">Logout</small>
+                                </i>
+                        </a>
+                    </li>
+                   
+                    <!--OPÇÃO Registo-->
+                    <li id="optRegisto" class="nav-item">
+                        <a id="linkRegistar" data-toggle="modal" data-target="#registoModal" class="nav-link" href="#">
+                                <i class="fas fa-user-plus">
+                                        <small style="font-family:Arial">Registar</small>
+                                </i>
+                        </a>
+                    </li>
+                    <!--OPÇÃO Cnfiguraçao-->
+                    <li id="optConfig" class="nav-item">
+                        <a id="linkConfig" class="nav-link " href="Config.html">
+                                <i class="fas fa-cogs">
+                                    
+                                </i>
+                        </a>
+    
+                    </li>
+            </ul>
+
+        </div>
+    </nav>
+    <br>
+    <br>
+
+     <!-- Modal Login -->
+     <div class="modal right fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <form id="frmLogin">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <!-- image on the modal -->
+                        <div class="modal-body">
+                            <div id="imgModal">
+                                <img src="fotos/G.png" alt="">
+                                <br>
+                                <br>
+                            </div>
+    
+                            <h3 class="modal-title" id="exampleModalLabel">Login</h3>
+    
+                            <br>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="text" class="form-control" name="" id="ModalName" placeholder="Name" required>
+    
+                            </div>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="password" class="form-control" name="" id="ModalPassword" placeholder="Password" required>
+    
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button id="Loginbtn" type="submit" class="btn btn-warning">Entrar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+    
+        <!-- Modal de registo -->
+        <div class="modal fade" id="registoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <form id="frmRegistar">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- image on the modal -->
+                        <div class="modal-body">
+    
+                            <div id="imgModal">
+                                <img src="fotos/G.png" alt="">
+                                <br>
+                                <br>
+                            </div>
+    
+                            <h3 class="modal-title" id="exampleModalLabel">Registar</h3>
+    
+                            <br>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="text" class="form-control" name="" id="ModalNome" placeholder="Nome" required>
+    
+                            </div>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="Email" class="form-control" name="" id="ModalEmail" placeholder="Email" required>
+    
+                            </div>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="Password" class="form-control" name="" id="ModalPasswordR" placeholder="Password" required>
+    
+                            </div>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="Password" class="form-control" name="" id="ModalConfPassword" placeholder="Confirmar password" required>
+    
+                            </div>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <input type="url" class="form-control" name="" id="ModalFoto" placeholder="Link da foto">
+    
+                            </div>
+                            <br>
+                            <h4>Tipo de utilizador</h4>
+    
+                            <div class="row">
+                                <form action="">
+                                    <div class="col-sm-4">
+                                        <input id="estudante" type="radio" name="user" value="Estudante" checked> Estudante
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input id="docente" type="radio" name="user" value="Docente"> Docente
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input id="visitante" type="radio" name="user" value="Visitante"> Visitante
+                                    </div>
+    
+                                </form>
+                            </div>
+    
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <input id="RegistarModal" type="submit" class="btn btn-primary"></input>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+    
+
+    <div class="container" >
+        <br>
+       
+
+        <!-- Parcerias -->
+
+        <h2>Parcerias</h2>
+        <hr>
+        <br>
+        <div class="row">
+                <div class="col-sm-3">
+                    <button name="" id="btnAdParcerias" data-target="#modelParcerias" data-toggle="modal" class="button" href="#" role="button">Adicionar parcerias</button>
+    
+                </div>
+    
+               
+            </div>
+            <br>
+            <br>
+        <div id="cardParserias">
+
+        </div>
+       
+    </div>
+    <br>
+    <hr>
+
+
+    <!-- Modal parcerias -->
+
+    <div class="modal fade" id="modelParcerias" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id="frmParcerias">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+
+                    <h3 class="modal-title" id="exampleModalLabel" style="text-align:center">Adicionar parcerias</h3>
+
+                    <br>
+                    <div class="form-group">
+                        <label for=""></label>
+                        <input type="text" class="form-control" name="" id="modalNomeEmpresa" placeholder="Nome da empresa" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="modalLocalizaçaoEmpresa" placeholder="Localização da empresa" required>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="url" class="form-control" id="modalImagemEmpresa" placeholder="Link do logótipo" requireds>
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="url" class="form-control" id="modalLinkEmpresa" placeholder="Link da empresa">
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button id="Loginbtn" type="submit" class="btn btn-warning">Submeter</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+    </div>
+
+    </div>
+    </div>
+    </form>
+    </div>
+
+   
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+   
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</body>
+
+</html>
