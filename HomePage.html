@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>GEventos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="Fotos/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="HomePage.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
+     #navbarInicial
+    {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 500;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    }
+    nav.black
+    {
+    background-color: #AB292B;
+    height: 80px;
+    padding: 10px 50px;
+
+    }
+    nav ul
+    {
+        float: right;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav ul li
+    {
+        list-style: none;
+    }
+    nav ul li a
+    {   
+        list-style: 80px;
+        color: #fffbfb;
+        padding: 5px 20px ;
+        font-family: 'Roboto' , sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .5s;
+    }
+    nav.black ul li a
+    {
+        color: #fff;
+        line-height: 60px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover
+    {
+        
+        color: black;
+        
+    }
+    #active{
+
+        color: black;
+    }
+
+
+    /*css3 butao*/
+
+    * {
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    h6 {
+        font-family: "arial";
+
+    }
+
+    h2 {
+        text-align: center;
+        font-family: "particle regular";
+    }
+
+
+
+    #li {
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .round {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 90%;
+        height: 90%;
+        padding-top: 20px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 20px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
+        letter-spacing: -.065em;
+        font-family: "particle regular";
+        box-shadow: 2px 2px 7px rgba(0, 0, 0, .2);
+        border-radius: 300px;
+        border-width: 4px;
+        border-style: solid;
+    }
+
+    .round:hover {
+        width: 130%;
+        height: 130%;
+        left: -15%;
+        top: -15%;
+        font-size: 20px;
+        padding-top: 20%;
+        -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+        -o-box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+        -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+        z-index: 0;
+        border-width: 10px;
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+
+    a.green {
+        background-color: rgb(236, 182, 4);
+        color: rgb(7, 7, 6);
+        border-color: rgba(236, 182, 4);
+    }
+
+    a.green:hover {}
+
+    .round span.round {
+        opacity: 0;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        font-size: 1px;
+        border: none;
+        padding: 40% 20% 0 20%;
+        color: #fff;
+    }
+
+    .round span:hover {
+        opacity: .85;
+        font-size: 16px;
+        -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+        -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+        -o-text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+        
+    }
+
+    .green span {
+        background: rgba(109, 93, 1, 0.7);
+    }
+
+    /* Add a gray background color and some padding to the footer */
+
+    footer {
+        background-color: #AB292B;
+        padding: 5px;
+        color: white;
+        font-size: 30px;
+        text-shadow: 0 1px 0 black;
+        letter-spacing: -.065em;
+        font-family: "particle regular";
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        margin: auto;
+        height: 100%;
+    }
+
+    #carouselId {
+        background-image: url("fotos/gradient.jpg");
+        width: 100%;
+        height: 400px;
+        text-align: center;
+    }
+
+    #container {
+        padding-top: 40px;
+        height: 100%;
+    }
+
+    
+    #myTextSobreEsmad {
+        text-align: center;
+    }
+
+    #imgModal {
+        text-align: center;
+    }
+
+    
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+
+    @media (max-width: 600px) {
+        .carousel-caption {
+            display: none;
+
+        }
+    }
+</style>
+
+<body>
+    <!--BARRA DE NAVEGAÇÃO-->
+    <div class="banner">
+            <header>
+                <nav id="navbarInicial" class="navbar navbar-expand-sm">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li>
+                                <a id="myImgGeventos" href="#">
+                                    <img class="img-responsive2" src="Fotos/GEventosLogoFinal.png">
+                                </a>
+                            </li>
+                            
+                            <li id="optEventos" class="nav-item">
+                                <a class="nav-link" href="Eventos.html">Eventos</a>
+                            </li>
+                            <!--OPÇÃO Testemunhos-->
+                            <li id="optTestemunhos" class="nav-item">
+                                <a class="nav-link" href="testemunhos.html">Testemunhos</a>
+                            </li>
+                            <!--OPÇÃO Docentes-->
+                            <li id="optDocentes" class="nav-item">
+                                <a class="nav-link" href="Docentes.html">Docentes</a>
+                            </li>
+                            <!--OPÇÃO Parcerias-->
+                            <li id="optParcerias" class="nav-item">
+                                <a class="nav-link" href="Parcerias.html">Parcerias</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li id="optLogin" class="nav-item">
+    
+                                <a data-toggle="modal" data-target="#loginModal" class="nav-link" href="#">
+                                    <i class="fas fa-user-circle">
+                                        <small >Login</small>
+                                    </i>
+                                </a>
+                            </li>
+                            <li id="optLogout" class="nav-item">
+    
+                                <a data-target="#" class="nav-link" href="#">
+                                    <i class="fas fa-sign-out-alt">
+                                        <small >Logout</small>
+                                    </i>
+                                </a>
+                            </li>
+                            <li id="optRegisto" class="nav-item">
+                                <a id="linkRegistar" data-toggle="modal" data-target="#registoModal" class="nav-link" href="#">
+                                    <i class="fas fa-user-plus">
+                                        <small >Registar</small>
+                                    </i>
+                                </a>
+                            </li>
+                            <li id="optConfig" class="nav-item">
+                                <a id="linkConfig" class="nav-link " href="Config.html">
+                                    <i class="fas fa-cogs">
+            
+                                    </i>
+                                </a>
+            
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+    
+    <!-- Modal Login -->
+    <div class="modal right fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id="frmLogin">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <!-- image on the modal -->
+                    <div class="modal-body">
+                        <div id="imgModal">
+                            <img src="fotos/G.png" alt="">
+                            <br>
+                            <br>
+                        </div>
+
+                        <h3 class="modal-title" id="exampleModalLabel">Login</h3>
+
+                        <br>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="text" class="form-control" name="" id="ModalName" placeholder="Name" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="password" class="form-control" name="" id="ModalPassword" placeholder="Password" required>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button id="Loginbtn" type="submit" class="btn btn-warning">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Modal de registo -->
+    <div class="modal fade" id="registoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form id="frmRegistar">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- image on the modal -->
+                    <div class="modal-body">
+
+                        <div id="imgModal">
+                            <img src="fotos/G.png" alt="">
+                            <br>
+                            <br>
+                        </div>
+
+                        <h3 class="modal-title" id="exampleModalLabel">Registar</h3>
+
+                        <br>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="text" class="form-control" name="" id="ModalNome" placeholder="Nome" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="Email" class="form-control" name="" id="ModalEmail" placeholder="Email" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="Password" class="form-control" name="" id="ModalPasswordR" placeholder="Password" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="Password" class="form-control" name="" id="ModalConfPassword" placeholder="Confirmar password" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="url" class="form-control" name="" id="ModalFoto" placeholder="Link da foto">
+
+                        </div>
+                        <br>
+                        <h4>Tipo de utilizador</h4>
+
+                        <div class="row">
+                            <form action="">
+                                <div class="col-sm-4">
+                                    <input id="estudante" type="radio" name="user" value="Estudante" checked> Estudante
+                                </div>
+                                <div class="col-sm-4">
+                                    <input id="docente" type="radio" name="user" value="Docente"> Docente
+                                </div>
+                                <div class="col-sm-4">
+                                    <input id="visitante" type="radio" name="user" value="Visitante"> Visitante
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <input id="RegistarModal" type="submit" class="btn btn-primary"></input>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!--carossel-->
+
+    <div id="carouselId" class="carousel slide" data-ride="carousel">
+
+
+        <ol class="carousel-indicators">
+            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselId" data-slide-to="1"></li>
+            <li data-target="#carouselId" data-slide-to="2"></li>
+            <li data-target="#carouselId" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active mt-2 pt-5 pt-2">
+                <img src="fotos/Eventos.png" alt="" style="width:30%; height:30%">
+
+            </div>
+            <div class="carousel-item  mt-2 pt-5 pt-2">
+                <img src="fotos/Testemunhos.png" alt="Second slide" style="width:30%; height:30%">
+
+            </div>
+            <div class="carousel-item  mt-2 pt-5 pt-2">
+                <img src="fotos/Docentes.png" alt="Second slide" style="width:30%; height:30%">
+
+            </div>
+            <div class="carousel-item  mt-2 pt-5 pt-2">
+                    <img src="fotos/Parcerias.png" alt="Second slide" style="width:30%; height:30%">
+    
+                </div>
+            
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+
+    </div>
+
+
+    <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br> </br>
+    <!--containar-->
+    <div id="homePageContent" class="container">
+
+        <br>
+        <h2>Eventos mais recentes</h2>
+        <hr>
+
+        <div id="HomePageCartEventos">
+
+
+        </div>
+        <br>
+        <br>
+
+        <br>
+        <h2>Parcerias do curso</h2>
+        <hr>
+
+        <div id="HomePageCartParcerias">
+
+
+        </div>
+        <br>
+        <br>
+
+        <br>
+        <h2>Docentes do curso</h2>
+        <hr>
+
+        <div id="HomePageCartDocentes">
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- button sobre and ESMAD-->
+    <div id="myBtnSobreEsmad">
+        <div class="row">
+            <div class="col-sm-3">
+
+            </div>
+
+            <div id="myTextSobreEsmad" class="col-sm-3">
+                <li id="li">
+                    <a href="https://geventostsiw1718.wordpress.com/site/" class="round green" target="https://geventostsiw1718.wordpress.com/site/">EQUIPA
+                        <span class="round">Visitar!</span>
+                    </a>
+                </li>
+                <h6>Visite o nosso diário de bordo e fique por dentro de todas as nossas publicações semanais do nosso projeto</h6>
+            </div>
+
+            <div class="col-sm-0">
+
+            </div>
+
+            <div id="myTextSobreEsmad" class="col-sm-3">
+
+                <li id="li">
+                    <a href="https://www.esmad.ipp.pt/" class="round green" target="https://www.esmad.ipp.pt/">ESMAD
+                        <span class="round">Visitar!</span>
+                    </a>
+                </li>
+                <h6>Visite a página da escola para mais informação</h6>
+                <br>
+                <br>
+            </div>
+        </div>
+        <br>
+
+    </div>
+
+
+    <footer class="container-fluid text-center">
+        <p>Developed by TSIW students</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+
+</body>
+
+</html>
